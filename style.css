@@ -1,0 +1,74 @@
+:root {
+    --desktop: 1440px;
+    --mobile: 375px;
+    --shadow: 0px 0px 5px 0px rgba(0,0,0,0.66); 
+    --radius: 10px;
+    --margin: 1em;
+    --padding: 1em;
+}
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+}
+body {
+    background-color: hsl(210, 46%, 95%);
+    font-family: 'Barlow Semi Condensed';
+    font-size: 13px;
+}
+
+.container {
+    /* width: var(--desktop); */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) ;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "test1 test1 test2 test3"
+    "test4 test5 test5 test3";
+    column-gap: 1em;
+    row-gap: 1em;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 
+}
+
+.grid-cell1, .grid-cell2, .grid-cell3, .grid-cell4, .grid-cell5 {
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    margin: var(--margin);
+    padding: var(--padding);
+}
+.grid-cell1 {
+    grid-area: test1;
+}
+.grid-cell2 {
+    grid-area: test2;
+}
+
+.grid-cell3 {
+    grid-area: test5;
+}
+
+.grid-cell4 {
+    grid-area: test3;
+}
+
+.grid-cell5 {
+    grid-area: test4;
+}
+
+@media only screen and (max-width: 375px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
+}
