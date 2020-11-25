@@ -43,6 +43,7 @@ body {
     grid-area: test1;
     background-color: hsl(263, 55%, 52%);
     color: hsl(0, 0%, 100%);
+    position: relative;
 }
 .grid-cell2 {
     grid-area: test2;
@@ -82,6 +83,7 @@ h1 {
     margin-left: 40px;
 }
 h4 {
+    margin-top: 5px;
     margin-left: 40px;
     color: hsla(0, 0%, 100%, 50%);
     font-size: 0.75em;
@@ -90,10 +92,19 @@ h4 {
     color: hsla(217, 19%, 35%, 50%);
 }
 blockquote {
+    position: relative;
     font-size: 1.25em;
     margin: 20px 10px;
+    z-index: 999;
 }
 p {
     margin: 10px;
-    opacity: 75%;
+    opacity: 60%;
+    line-height: 1.5;
+}
+svg {
+    position: absolute;    
+    left: 60%;
+    right: 0;
+    top: 0;
 }
